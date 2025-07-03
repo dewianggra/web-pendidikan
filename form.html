@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kontak</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #f4f4f4;">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">📨 Form kontak</h2>
+                        <form id="contactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama:</label>
+                                <input type="text" id="nama" name="nama" class="form-control" required>
+                                <div id="namaError" class="text-danger small"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <div id="emailError" class="text-danger small"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label">Pesan:</label>
+                                <textarea id="pesan" name="pesan" rows="4" class="form-control" required></textarea>
+                                <div id="pesanError" class="text-danger small"></div>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Kirim</button>
+                        </form>
+                        <a href="index.html" class="d-block text-center mt-3">Kembali ke beranda</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            let isValid = true;
+
+            document.getElementById('namaError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('pesanError').textContent = '';
+
+            const nama = document.getElementById('nama').value.trim();
+            if (nama === '') {
+                document.getElementById('namaError').textContent = 'Nama harus diisi.';
+                isValid = false;
+            }
+
+            const email = document.getElementById('email').value.trim();
+            if (email === '') {
+                document.getElementById('emailError').textContent = 'Email harus diisi.';
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                document.getElementById('emailError').textContent = 'Email tidak valid.';
+                isValid = false;
+            }
+
+            const pesan = document.getElementById('pesan').value.trim();
+            if (pesan === '') {
+                document.getElementById('pesanError').textContent = 'Pesan harus diisi.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            } else {
+                alert('Formulir berhasil dikirim!');
+                document.getElementById('contactForm').reset(); // Tambahan: reset form setelah submit sukses
+            }
+        });
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #2a6ebb;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Navigasi */
+nav {
+    background-color: #1e5aa8;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #174b87;
+    border-radius: 6px;
+}
+
+/* Konten Utama */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #2a6ebb;
+    margin-bottom: 15px;
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Kartu Info / Materi */
+.card {
+    background-color: #e9f2fc;
+    border-left: 5px solid #2a6ebb;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #2a6ebb;
+    margin-bottom: 10px;
+}
+
+/* Container utama */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Judul */
+.container h1 {
+    text-align: center;
+    color: #2a6ebb;
+    margin-bottom: 20px;
+}
+
+/* Soal Latihan */
+.question {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 5px solid #2a6ebb;
+    background-color: #eef6ff;
+    border-radius: 8px;
+}
+
+.question h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1c4b8e;
+}
+
+/* Input Jawaban */
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Tombol Kirim */
+button {
+    display: block;
+    width: 100%;
+    background-color: #2a6ebb;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d4d95;
+}
+
+/* Daftar Sumber */
+.sumber-item {
+    background-color: #e8f2ff;
+    border-left: 6px solid #2a6ebb;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.sumber-item:hover {
+    background-color: #d9eaff;
+    transform: translateX(5px);
+}
+
+.sumber-item h2 {
+    font-size: 18px;
+    color: #1e4e8c;
+    margin-bottom: 8px;
+}
+
+.sumber-item p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* Tautan */
+.sumber-item a {
+    color: #1c6ed2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Gaya untuk tautan "Kembali ke beranda" */
+a.kembali {
+    display: inline-block;
+    /* Membuat tautan menjadi blok inline */
+    padding: 10px 20px;
+    /* Menambahkan ruang di dalam kotak */
+    background-color: #4CAF50;
+    /* Warna latar belakang */
+    color: white;
+    /* Warna teks */
+    text-decoration: none;
+    /* Menghilangkan garis bawah */
+    border-radius: 5px;
+    /* Sudut melengkung */
+    transition: background-color 0.3s;
+    /* Efek transisi saat hover */
+}
+
+a.kembali:hover {
+    background-color: #45a049;
+    /* Warna latar belakang saat hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
